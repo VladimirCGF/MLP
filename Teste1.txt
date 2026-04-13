@@ -1,0 +1,351 @@
+PS C:\Users\vladi\Documents\Facu 8P\IA\MLP OK> & "C:/Program Files/Python311/python.exe" "c:/Users/vladi/Documents/Facu 8P/IA/MLP OK/mlp.py"
+
+======================================================================
+FASE 1: REPRODUTIBILIDADE E PREPARAÇÃO DO AMBIENTE
+======================================================================
+
+✓ Seeds configurados com valor: 42
+✓ Dispositivo disponível: CPU
+Seeds configurados com valor: 42
+Dispositivo disponível: CPU
+
+======================================================================
+FASE 2: ENGENHARIA DE DADOS (DATA PIPELINE)
+======================================================================
+
+[2.1] Carregamento e Análise Exploratória
+======================================================================
+INFORMAÇÕES DO DATASET IRIS
+======================================================================
+
+Tamanho do dataset: (150, 6)
+
+Primeiras 5 amostras:
+   sepal length (cm)  sepal width (cm)  petal length (cm)  petal width (cm)  target target_name
+0                5.1               3.5                1.4               0.2       0      setosa
+1                4.9               3.0                1.4               0.2       0      setosa
+2                4.7               3.2                1.3               0.2       0      setosa
+3                4.6               3.1                1.5               0.2       0      setosa
+4                5.0               3.6                1.4               0.2       0      setosa
+
+Estatísticas descritivas:
+       sepal length (cm)  sepal width (cm)  petal length (cm)  petal width (cm)      target
+count         150.000000        150.000000         150.000000        150.000000  150.000000
+mean            5.843333          3.057333           3.758000          1.199333    1.000000
+std             0.828066          0.435866           1.765298          0.762238    0.819232
+min             4.300000          2.000000           1.000000          0.100000    0.000000
+25%             5.100000          2.800000           1.600000          0.300000    0.000000
+50%             5.800000          3.000000           4.350000          1.300000    1.000000
+75%             6.400000          3.300000           5.100000          1.800000    2.000000
+max             7.900000          4.400000           6.900000          2.500000    2.000000
+
+Distribuição de classes:
+target_name
+setosa        50
+versicolor    50
+virginica     50
+Name: count, dtype: int64
+
+Tipos de dados:
+sepal length (cm)    float64
+sepal width (cm)     float64
+petal length (cm)    float64
+petal width (cm)     float64
+target                 int64
+target_name              str
+dtype: object
+Traceback (most recent call last):
+plot.py", line 613, in show
+    return _get_backend_mod().show(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vladi\AppData\Roaming\Python\Python311\site-packages\matplotlib\backend_bases.py", line 3550, in show
+    cls.mainloop()
+  File "C:\Users\vladi\AppData\Roaming\Python\Python311\site-packages\matplotlib\backends\_backend_tk.py", line 572, in start_main_loop  
+    first_manager.window.mainloop()
+  File "C:\Program Files\Python311\Lib\tkinter\__init__.py", line 1504, in mainloop
+    self.tk.mainloop(n)
+KeyboardInterrupt
+PS C:\Users\vladi\Documents\Facu 8P\IA\MLP OK> & "C:/Program Files/Python311/python.exe" "c:/Users/vladi/Documents/Facu 8P/IA/MLP OK/mlp.py"
+
+======================================================================
+FASE 1: REPRODUTIBILIDADE E PREPARAÇÃO DO AMBIENTE
+======================================================================
+
+[OK] Seeds configurados com valor: 42
+[OK] Dispositivo disponível: CPU
+Seeds configurados com valor: 42
+Dispositivo disponível: CPU
+
+======================================================================
+FASE 2: ENGENHARIA DE DADOS (DATA PIPELINE)
+======================================================================
+
+[2.1] Carregamento e Análise Exploratória
+======================================================================
+INFORMAÇÕES DO DATASET IRIS
+======================================================================
+
+Tamanho do dataset: (150, 6)
+
+Primeiras 5 amostras:
+   sepal length (cm)  sepal width (cm)  petal length (cm)  petal width (cm)  target target_name
+0                5.1               3.5                1.4               0.2       0      setosa
+1                4.9               3.0                1.4               0.2       0      setosa
+2                4.7               3.2                1.3               0.2       0      setosa
+3                4.6               3.1                1.5               0.2       0      setosa
+4                5.0               3.6                1.4               0.2       0      setosa
+
+Estatísticas descritivas:
+       sepal length (cm)  sepal width (cm)  petal length (cm)  petal width (cm)      target
+count         150.000000        150.000000         150.000000        150.000000  150.000000
+mean            5.843333          3.057333           3.758000          1.199333    1.000000
+std             0.828066          0.435866           1.765298          0.762238    0.819232
+min             4.300000          2.000000           1.000000          0.100000    0.000000
+25%             5.100000          2.800000           1.600000          0.300000    0.000000
+50%             5.800000          3.000000           4.350000          1.300000    1.000000
+75%             6.400000          3.300000           5.100000          1.800000    2.000000
+max             7.900000          4.400000           6.900000          2.500000    2.000000
+
+Distribuição de classes:
+target_name
+setosa        50
+versicolor    50
+virginica     50
+Name: count, dtype: int64
+
+Tipos de dados:
+sepal length (cm)    float64
+sepal width (cm)     float64
+petal length (cm)    float64
+petal width (cm)     float64
+target                 int64
+target_name              str
+dtype: object
+
+[OK] Dataset carregado e analisado com sucesso!
+
+[2.2] Particionamento dos Dados (Train-Validation-Test Split)
+======================================================================
+PARTICIONAMENTO DOS DADOS
+======================================================================
+
+Tamanho dos conjuntos:
+  • Treino:     105 amostras (70.0%)
+  • Validação:  22 amostras (14.7%)
+  • Teste:      23 amostras (15.3%)
+
+Distribuição de classes no TREINO:
+  • Classe 0: 35 (33.3%)
+  • Classe 1: 35 (33.3%)
+  • Classe 2: 35 (33.3%)
+
+Distribuição de classes no TESTE:
+  • Classe 0: 7 (30.4%)
+  • Classe 1: 8 (34.8%)
+  • Classe 2: 8 (34.8%)
+
+[2.3] Normalização dos Dados (StandardScaler)
+======================================================================
+NORMALIZAÇÃO DOS DADOS (StandardScaler)
+======================================================================
+
+Média antes da normalização (treino): [5.873 3.055 3.785 1.206]
+Média após normalização (treino):  [ 0. -0. -0. -0.]
+
+Desvio padrão antes: [0.859 0.455 1.776 0.774]
+Desvio padrão após:  [1. 1. 1. 1.]
+
+[OK] Dados normalizados com sucesso (sem data leakage!)
+
+======================================================================
+FASE 3: DESIGN E CONSTRUÇÃO DA ARQUITETURA MLP
+======================================================================
+======================================================================
+ARQUITETURA DA MLP
+======================================================================
+
+Parâmetros:
+  • Input size: 4
+  • Hidden layer 1: 3 neurônios
+  • Output size (classes): 3
+
+Funções de ativação:
+  • Camadas ocultas: ReLU (evita vanishing gradient)
+  • Camada saída: LogSoftmax (para multiclasse)
+
+Modelo instanciado no dispositivo: cpu
+
+Arquitetura do modelo:
+MLPClassifier(
+  (fc1): Linear(in_features=4, out_features=3, bias=True)
+  (relu1): ReLU()
+  (fc2): Linear(in_features=3, out_features=3, bias=True)
+)
+
+======================================================================
+FASE 4: CONFIGURAÇÃO DO TREINAMENTO
+======================================================================
+======================================================================
+CONFIGURAÇÃO DO TREINAMENTO
+======================================================================
+
+Função de Perda: CrossEntropyLoss (multiclasse)
+Otimizador: Adam
+Learning Rate: 0.01
+Batch Size: 16
+Número máximo de épocas: 200
+Early Stopping Patience: 30 épocas
+
+DataLoaders criados:
+  • Train loader: 7 batches
+
+======================================================================
+FASE 5: LOOP DE TREINAMENTO E MONITORAMENTO
+======================================================================
+======================================================================
+INICIANDO TREINAMENTO
+======================================================================
+Época [ 20/200] | Train Loss: 0.2308 | Train Acc: 0.9429 | Val Loss: 0.2856 | Val Acc: 0.9091
+Época [ 40/200] | Train Loss: 0.1059 | Train Acc: 0.9714 | Val Loss: 0.1691 | Val Acc: 0.9091
+Época [ 60/200] | Train Loss: 0.0700 | Train Acc: 0.9714 | Val Loss: 0.1454 | Val Acc: 0.9091
+Época [ 80/200] | Train Loss: 0.0521 | Train Acc: 0.9810 | Val Loss: 0.1405 | Val Acc: 0.9091
+Época [100/200] | Train Loss: 0.0464 | Train Acc: 0.9905 | Val Loss: 0.1573 | Val Acc: 0.8636
+
+⚡ Early stopping acionado na época 105
+✓ Melhor modelo restaurado (val_loss: 0.1383)
+
+✓ Treinamento concluído em 105 épocas
+
+📊 Análise das Curvas:
+  • Train Loss final: 0.0403
+  • Val Loss final: 0.1596
+  • Train Accuracy final: 0.9905
+  • Val Accuracy final: 0.8636
+
+======================================================================
+FASE 6: AVALIAÇÃO NO CONJUNTO DE TESTE
+======================================================================
+======================================================================
+AVALIAÇÃO NO CONJUNTO DE TESTE
+======================================================================
+
+Desempenho Global:
+  • Acurácia: 0.9565 (95.65%)
+  • Perda (Loss): 0.0829
+  • Amostras corretas: 22/23
+
+Comparação entre conjuntos:
+  • Train Accuracy:  0.9905
+  • Val Accuracy:    0.8636
+  • Test Accuracy:   0.9565
+
+Diagnóstico:
+  ✓ Bom ajuste (gap: 0.0340)
+
+======================================================================
+FASE 7: DIAGNÓSTICO COM MATRIZ DE CONFUSÃO E MÉTRICAS
+======================================================================
+
+----------------------------------------------------------------------
+MÉTRICAS DETALHADAS POR CLASSE (Precision, Recall, F1-Score)
+----------------------------------------------------------------------
+
+Métricas por classe:
+
+Setosa:
+  • Precision: 1.0000
+  • Recall:    1.0000
+  • F1-Score:  1.0000
+  • Suporte:   7 amostras
+
+Versicolor:
+  • Precision: 0.8889
+  • Recall:    1.0000
+  • F1-Score:  0.9412
+  • Suporte:   8 amostras
+
+Virginica:
+  • Precision: 1.0000
+  • Recall:    0.8750
+  • F1-Score:  0.9333
+  • Suporte:   8 amostras
+
+Médias:
+  • Macro-average F1:    0.9582
+  • Weighted-average F1: 0.9564
+
+----------------------------------------------------------------------
+RELATÓRIO DE CLASSIFICAÇÃO COMPLETO
+----------------------------------------------------------------------
+              precision    recall  f1-score   support
+
+      Setosa       1.00      1.00      1.00         7
+  Versicolor       0.89      1.00      0.94         8
+   Virginica       1.00      0.88      0.93         8
+
+    accuracy                           0.96        23
+   macro avg       0.96      0.96      0.96        23
+weighted avg       0.96      0.96      0.96        23
+
+
+======================================================================
+FASE 8: PERSISTÊNCIA DO MODELO
+======================================================================
+======================================================================
+PERSISTÊNCIA DO MODELO
+======================================================================
+
+Arquivos salvos em './saved_models/':
+  ✓ iris_mlp_weights.pth (2551 bytes)
+  ✓ iris_mlp_full.pth (3609 bytes)
+  ✓ iris_mlp_metadata.json
+
+✓ Testando carregamento do modelo...
+  • Acurácia do modelo carregado: 0.9565
+  • Diferença de acurácia: 0.000000
+
+✓ Modelo persistido e validado com sucesso!
+
+======================================================================
+BONUS: INFERÊNCIA EM NOVAS AMOSTRAS
+======================================================================
+
+Exemplo 1: Predição em amostra do conjunto de teste
+  • Amostra real (normalizada): [-0.202  1.637 -1.174 -1.17 ]
+  • Classe verdadeira: Setosa
+  • Classe predita: Setosa
+  • Probabilidades por classe:
+    - Setosa: 100.00%
+    - Versicolor: 0.00%
+    - Virginica: 0.00%
+  • Resultado: ✓ Correto
+
+Exemplo 2: Predição em amostra hipotética (flor com características específicas)
+  • Características da flor:
+    - Sepal Length: 5.5 cm
+    - Sepal Width:  3.5 cm
+    - Petal Length: 1.3 cm
+    - Petal Width:  0.3 cm
+  • Classe predita: Setosa
+  • Confiança: 99.96%
+
+✓ Inferência concluída com sucesso!
+
+============================================================
+Modelo testado: MLP (4-3-3)
+Ativação: ReLU
+Otimizador: Adam
+Learning rate: 0.01
+
+Resultado:
+Accuracy: 96%
+Train Accuracy: 99.0%
+Val Accuracy: 86.4%
+
+Observação:
+[OK] Modelo bem ajustado e generalizado
+============================================================
+
+✓ PIPELINE CONCLUÍDO COM SUCESSO!
+
+PS C:\Users\vladi\Documents\Facu 8P\IA\MLP OK> 
