@@ -1,0 +1,30 @@
+{
+    "input_size": 4,
+    "hidden_size": 3,
+    "output_size": 3,
+    "test_accuracy": 0.9565217391304348,
+    "test_loss": 0.08288569748401642,
+    "class_names": [
+        "Setosa",
+        "Versicolor",
+        "Virginica"
+    ],
+    "feature_names": [
+        "sepal length (cm)",
+        "sepal width (cm)",
+        "petal length (cm)",
+        "petal width (cm)"
+    ],
+    "scaler_mean": [
+        5.873333333333331,
+        3.0552380952380958,
+        3.784761904761905,
+        1.2057142857142857
+    ],
+    "scaler_std": [
+        0.8588216364150376,
+        0.455020868674949,
+        1.7755364556143083,
+        0.7738375086514726
+    ]
+}
