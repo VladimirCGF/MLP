@@ -1,9 +1,9 @@
 {
     "input_size": 4,
-    "hidden_size": 3,
+    "hidden_size": 64,
     "output_size": 3,
     "test_accuracy": 0.9565217391304348,
-    "test_loss": 0.08288569748401642,
+    "test_loss": 0.08572107553482056,
     "class_names": [
         "Setosa",
         "Versicolor",

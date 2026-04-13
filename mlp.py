@@ -227,7 +227,7 @@ input_size = X_train_scaled.shape[1]  # 4 features
 output_size = len(np.unique(y))       # 3 classes
 
 # Heurística para número de neurônios nas camadas ocultas
-hidden_size = int((input_size + output_size) / 2)  # Média: (4 + 3) / 2 ≈ 3.5 → 8
+hidden_size = 64  # 1 camada oculta com 64 neurônios
 
 print("=" * 70)
 print("ARQUITETURA DA MLP")
@@ -237,7 +237,7 @@ print(f"  • Input size: {input_size}")
 print(f"  • Hidden layer 1: {hidden_size} neurônios")
 print(f"  • Output size (classes): {output_size}")
 print(f"\nFunções de ativação:")
-print(f"  • Camadas ocultas: ReLU (evita vanishing gradient)")
+print(f"  • Camadas ocultas: Sigmoid (suave e diferenciável)")
 print(f"  • Camada saída: LogSoftmax (para multiclasse)")
 
 # Definir modelo
@@ -247,7 +247,7 @@ class MLPClassifier(nn.Module):
         
         # Camada 1: input → hidden
         self.fc1 = nn.Linear(input_size, hidden_size)
-        self.relu1 = nn.ReLU()
+        self.relu1 = nn.Sigmoid()  # Ativação Sigmoid para a camada oculta
         
         # Camada 2: hidden → output
         self.fc2 = nn.Linear(hidden_size, output_size)
@@ -686,7 +686,7 @@ def gerar_relatorio_modelo(model, hidden_size, learning_rate, test_accuracy, tra
     output_size = model.fc2.out_features
     
     model_name = f"MLP ({input_size}-{hidden_size}-{output_size})"
-    activation = "ReLU"
+    activation = "Sigmoid"
     optimizer_name = "Adam"
     
     # ===== DIAGNÓSTICO AUTOMÁTICO =====
