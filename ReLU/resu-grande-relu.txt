@@ -329,7 +329,7 @@ Exemplo 2: Predição em amostra hipotética (flor com características específ
 ✓ Inferência concluída com sucesso!
 
 ============================================================
-Modelo testado: MLP (4-16-3)
+Modelo testado: MLP (4-64-3)
 Ativação: ReLU
 Otimizador: Adam
 Learning rate: 0.01

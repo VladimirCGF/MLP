@@ -3,7 +3,7 @@
     "hidden_size": 64,
     "output_size": 3,
     "test_accuracy": 0.9565217391304348,
-    "test_loss": 0.08572107553482056,
+    "test_loss": 0.09743738919496536,
     "class_names": [
         "Setosa",
         "Versicolor",
